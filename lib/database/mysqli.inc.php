@@ -57,6 +57,9 @@ function db_connect($host, $user, $passwd, $dbname, $cache_link = TRUE) {
 			$link = @mysqli_connect($host, $user, $passwd, $dbname, $port);
 		else
 			$link = @mysqli_connect($host, $user, $passwd, $dbname);
+    }
+    if (!mysqli_set_charset($link, "utf8")) {
+    	printf("Error loading character set utf8: %s\n", mysqli_error($link));
 	}
 
 	if ($link !== FALSE) {
