@@ -1,0 +1,293 @@
+/* GENERAL */
+html, body
+{
+	padding-bottom: 25px;
+}
+
+table
+{
+	width: auto;
+}
+
+td
+{
+	padding: 5px ! important;
+}
+
+div#poweredBy
+{
+	display: none;
+}
+
+div#header
+{
+	height: 60px;
+}
+
+div#header h1
+{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-size: 26px;
+}
+
+div#content.adminContent h2
+{
+	position: absolute;
+	top: 0;
+	right: 15px;
+	margin: 21px 0;
+	color: #666;
+	font-size: 20px;
+}
+
+div#content.adminContent form#toolType select
+{
+	position: absolute;
+	top: 55px;
+	left: 15px;
+}
+
+div#header select
+{
+	top: 47px;
+	left: 15px;
+}
+
+/* tab menu */
+ul#tab-menu li
+{
+	display: block;
+	float: left;
+	border: none;
+	background: none;
+	width: 200px;
+	padding: 5px 0;
+}
+
+ul#tab-menu li a, ul#tab-menu li a:visited
+{
+	color: #999;
+}
+
+ul#tab-menu li a:hover
+{
+	color: #fff;
+}
+
+ul#tab-menu li.activetab
+{
+	border: none ! important;
+}
+
+div#tab-content
+{
+	width: 100%;
+	clear: both;
+	padding-top: 15px;
+}
+
+form table
+{
+	margin-bottom: 10px;
+}
+
+table.sqlList
+{
+	margin-top: 15px;
+}
+
+table.sqlList td
+{
+	white-space: nowrap ! important;
+}
+
+input.button
+{
+	margin-right: 5px ! important;
+}
+
+form>ul.saveButtons,
+div#tab-content>ul.saveButtons
+{
+	background: #222 url(images/h1_bg.png) repeat-y;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 10px 15px;
+	margin: 0;
+	width: 100%;
+	border-top: 1px solid #666;
+}
+
+form>ul.saveButtons li,
+div#tab-content>ul.saveButtons
+{
+	display: inline;
+	padding-right: 5px;
+}
+
+ul.actionButtons
+{
+	padding-top: 10px;
+}
+
+ul.actionButtons li
+{
+	display: inline;
+	padding-right: 5px;
+}
+
+td.prompt
+{
+	white-space: nowrap;
+}
+
+/* Tooltips */
+td.prompt a, td.data a
+{
+	padding-left: 5px;
+}
+
+table#overCap.tooltip-caption, table.tooltip
+{
+	margin: 0 0 0 -95px;
+	padding: 0;
+	width: 350px;
+}
+
+table.tooltip td
+{
+	margin: 0 ! important;
+	padding: 0 ! important;
+}
+
+div.tooltip
+{
+	border: 1px solid white;
+	padding: 5px;
+	background: #3366cc;
+	color: white;
+}
+
+div.tooltip-caption
+{
+	padding: 5px;
+	background: white;
+	color: black;
+	font-weight: bold;
+}
+
+.tooltip dt
+{
+	font-weight: bold;
+}
+
+.tooltip h2
+{
+	white-space: normal;
+	font-weight: bold;
+}
+
+
+/* misc */
+td.success
+{
+	padding: 0 10px;
+	white-space: nowrap;
+}
+
+ul.checkboxGridOptionsVertical
+{
+	float: left;
+	padding-bottom: 10px;
+}
+
+ul.checkboxGridOptionsVertical li
+{
+	width: 300px;
+}
+
+td.url
+{
+	text-align: left;
+}
+
+/* listing pager */
+ul.listingPager li
+{
+	float: left;
+	border: 1px solid black;
+	padding-right: 5px;
+}
+
+ul.listingPager li.currentPage
+{
+	color: #fff;
+	font-weight: bold;
+}
+
+/* Alpha List in Language Configuration */
+form ul#tab-menu.tabMenu li
+{
+	width: auto;
+	height: auto;
+	border: 1px solid #000;
+	padding: 1px;
+}
+
+form ul#tab-menu.tabMenu li.activetab
+{
+	color: #99ff33;
+	font-weight: bold;
+	border: 1px solid #000 ! important;
+}
+
+form ul#tab-menu.tabMenu li.activetab:hover
+{
+	background: transparent;
+}
+
+form ul#tab-menu.tabMenu li:hover
+{
+	border: 1px solid #99ff33 ! important;
+	color: #99ff33;
+	background: #333;
+}
+
+ul.itemTypeGroupList
+{
+	padding-left: 15px;
+}
+
+/* announcements */
+ul.announcement
+{
+	width: 600px;
+}
+
+ul.announcement li
+{
+	padding-bottom: 15px;
+	border-bottom: 1px solid #666;
+}
+
+ul.metadata
+{
+	padding-left: 15px;
+	font-size: 80%;
+	color: #99ff33;
+}
+
+ul.metadata li
+{
+	border: none;
+	padding: 0 ! important;
+}
+
+ul.announcement ul.footer-links
+{
+	float: right;
+	margin-top: -30px;
+}

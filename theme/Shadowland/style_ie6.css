@@ -1,0 +1,100 @@
+/*
+While this theme does implement a fix that allows
+older versions of Internet Explorer to properly
+display transparent PNG files, when assigned as a
+container's background, transparency is lost.
+
+"! important" was added to various properties to
+ensure the original would be overwritten, and so
+that a single css file could manage all ie6
+corrections.
+*/
+
+
+/* ALL PAGES */
+#header
+{
+	background: #111 ! important;
+}
+
+input.file
+{
+	padding: 3px;
+}
+
+
+/* LOGIN PAGE */
+div#lastitemslist ul li
+{
+	height: 250px ! important;
+}
+
+div#lastitemslist img.s_item_type
+/* ie does not render the image on a separate line as
+this theme intends, so hide we'll hide the ugliness */
+{
+	float: right;
+}
+
+div#whatsnew
+{
+	width: 275px ! important;
+}
+
+div#announcements
+{
+	width: 255px ! important;
+	margin: 5px ! important;
+}
+
+
+/* ADD CONTENT */
+div#site-add-content
+{
+	padding-top: 15px;
+}
+
+div#site-add-content img.siteLogo
+{
+	display: none;
+}
+
+
+/* LISTING PAGE */
+div#listing-filters form
+{
+	background: #000 ! important;
+}
+
+
+/* ITEM DISPLAY PAGE */
+div#content.item_displayContent
+{
+	margin-top: 15px;
+}
+
+div#content.item_displayContent ul.coverimages
+{
+	background: url(ie6_images/coverimagebg.gif) no-repeat ! important;
+}
+
+
+/* add user */
+dl.userType dd
+{
+	padding-left: 25px ! important;
+}
+
+
+/* email */
+div#content.emailContent h2
+{
+	background: url(ie6_images/email.gif) no-repeat right ! important;
+}
+
+
+/* help */
+div#content.helpContent
+{
+	background: none ! important;
+}

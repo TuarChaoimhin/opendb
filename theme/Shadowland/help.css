@@ -1,0 +1,25 @@
+#header, #navigation
+{
+	display: none;
+}
+
+h4
+{
+	padding-left: 15px;
+}
+
+ol, ul, li
+{
+	margin-left: 15px;
+	color: #ccc;
+}
+
+ul
+{
+	list-style-type: disc;
+}
+
+ul li ul
+{
+	list-style-type: circle;
+}

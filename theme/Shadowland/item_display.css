@@ -1,0 +1,169 @@
+div#content.item_displayContent ul.coverimages
+{
+	float: right;
+	margin-top: -65px;
+	background: url(images/coverimagebg.png) no-repeat;
+	padding: 5px;
+}
+
+div#instanceInfo td
+{
+	padding: 10px;
+}
+
+div#details.tabContent ul.names li,
+div#details.tabContent ul.category li
+{
+	float: left;
+	padding-right: 15px;
+}
+
+div#details.tabContent table
+{
+	padding-top: 10px;
+}
+
+div#details.tabContent p.rating
+{
+	margin-bottom: 0;
+	margin-top: 5px;
+	padding-left: 2px;
+}
+
+/* instance info */
+
+div#instanceInfo ul.footer-links
+{
+	padding-top: 15px;
+}
+
+td.data.movieplot
+{
+	line-height: 150%;
+}
+
+/* dvd (genre) */
+td.data.moviegenre li
+{
+	width: 150px;
+}
+
+/* dvd (language, subtitles) */
+td.data.audiolang li,
+td.data.subtitles li
+{
+	width: 225px;
+}
+
+/* dvd (age, region) */
+td.data.agerating li,
+td.data.dvdregion li
+{
+	width: 350px;
+}
+
+/* dvd (aspect ratio) */
+td.data.ratio li
+{
+	float: left;
+	width: 75px;
+}
+
+/* reviews */
+div#reviews.tabContent h3
+{
+	margin-bottom: 0;
+}
+
+div#reviews.tabContent ul.footer-links li
+{
+	float: none;
+	display: inline;
+	padding: 0 15px 0 0;
+}
+
+div#reviews.tabContent ul li
+{
+	padding-top: 15px;
+}
+
+div#reviews.tabContent ul li ul.footer-links
+{
+	padding: 0 0 5px 15px ! important;
+}
+
+div#reviews.tabContent ul.footer-links
+{
+	padding-top: 15px ! important;
+}
+
+div#reviews.tabContent p.author
+{
+	color: #333;
+	font-style: italic;
+}
+
+div#reviews.tabContent p.author:after
+{
+	content: ":";
+}
+
+div#reviews.tabContent p.comments
+{
+	line-height: 150%;
+}
+
+div#reviews.tabContent p.author,
+div#reviews.tabContent p.comments,
+div#reviews.tabContent span.rating
+{
+	margin: 0;
+	padding-left: 15px;
+}
+
+/* site links */
+ul.sitepluginLinks
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+ul.sitepluginLinks li
+{
+	padding: 15px 15px 0 2px ! important;
+	float: left;
+	display: block;
+}
+
+ul.sitepluginLinks li span
+{
+	display: block;
+}
+
+div#relatedItems,
+div#reviews
+{
+	clear: both;
+	padding-top: 1px;
+}
+
+ul.ticks li
+{
+	background: transparent url(images/tick.gif) no-repeat;
+	background-position: 0 0;
+	padding-left: 25px;
+	line-height: 150%;
+}
+
+/* copy info */
+ul.action-links li
+{
+	display: inline;
+	white-space: nowrap;
+}
+
+ul.sitepluginLinks span.sitePluginDescription
+{
+	padding-top: 5px;
+}

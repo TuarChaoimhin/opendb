@@ -1,0 +1,78 @@
+table.listing-table th
+{
+	vertical-align: bottom;
+	padding-bottom: 10px;
+}
+
+table.listing-table td
+{
+	padding: 10px;
+	vertical-align: top;
+	text-align: left;
+}
+
+ul.importOptions li
+{
+	padding-right: 15px;
+	float: left;
+}
+
+dl.importAttribs
+{
+	padding: 0;
+}
+
+dl.importAttribs dt
+{
+	font-weight: bold;
+}
+
+dd
+{
+	margin-bottom: 10px;
+	color: #999;
+}
+
+input.button
+{
+	margin-right: 10px;
+}
+
+input.file
+{
+	margin-right: 5px;
+}
+
+/* EXPERIMENTAL (May not work with all browsers) */
+tr > td:first-child
+/* experimental for action column */
+{
+	width: 1px;
+}
+
+tr > td:first-child + td
+/* experimental for item type image */
+{
+	width: 1px;
+}
+
+tr > td:first-child + td + td
+/* experimental for title column */
+{
+	width: 200px;
+	font-weight: bold;
+	font-size: 100%;
+	color: #ccc;
+}
+
+tr > td:first-child + td + td + td
+/* experimental for status column */
+{
+	text-align: center;
+}
+
+tr > td:first-child + td + td + td + td
+/* experimental for details column */
+{
+	width: 300px;
+}

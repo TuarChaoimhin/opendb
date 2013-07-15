@@ -1,0 +1,139 @@
+/* what's new */
+div#whatsnew
+{
+	float: right;
+	width: 230px;
+	padding: 10px;
+	border: 1px dashed #0066ff;
+	clear: both;
+}
+
+
+div#whatsnew ul.block li
+{
+	font-size: 90%;	
+	background-position: 0 0;
+	padding-left: 25px;
+	line-height: 15px;
+	margin-bottom: 5px;
+}
+
+div#whatsnew ul.block li.tick
+{
+	background: transparent url(images/tick.gif) no-repeat;
+}
+
+div#whatsnew ul.block li.cross
+{
+	background: transparent url(images/cross.gif) no-repeat;
+}
+
+
+/* announcements */
+div#announcements
+{
+	font-size: 90%;
+	float: right;
+	width: 250px;
+	clear: right;
+	color: #777;
+}
+
+div#whatsnew h3
+{
+	margin-top: 7px;
+	margin-bottom: 0;
+}
+
+div#whatsnew h4,
+div#announcements h4
+{
+	padding: 3px 5px;
+	margin-bottom: 5px;
+	background: #222;
+}
+
+a.adminLink
+{
+	display: block;
+	padding-top: 10px;
+	color: #99ff33;
+}
+
+div#lastitemslist
+{
+	position: absolute;
+	left: 15;
+	right: 275px;
+}
+
+div#lastitemslist li
+{
+	float: left;
+	width: 200px;
+	height: 250px;
+	padding: 0 5px;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+div#lastitemslist li img
+{
+	border: 1px solid #666;
+}
+
+div#lastitemslist a img:hover
+{
+	border: 1px solid white;
+}
+
+h4.title
+{
+	font-size: 100%;
+	letter-spacing: normal;
+	margin-bottom: 5px;
+}
+
+h4.title a img:hover
+{
+	border: none ! important;
+}
+
+li small
+{
+	color: #666;
+}
+
+div#lastitemslist img.s_item_type
+{	
+	display: block;
+	margin: 0 auto;
+	padding: 0 0 10px 0;
+	border: none;
+}
+
+/* login form */
+form#loginForm
+{
+	margin-left: 15px;
+}
+
+form#loginForm label
+{
+	display: block;
+}
+
+form#loginForm input
+{
+	margin: 5px 0 10px 0;
+}
+
+form#loginForm input.submit
+{
+	margin-top: 5px;
+}
+
+#content.loginContent input.submit
+{
+	margin-top: 10px;
+}

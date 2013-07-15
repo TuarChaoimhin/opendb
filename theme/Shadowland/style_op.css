@@ -1,0 +1,45 @@
+div#announcements h3
+{
+	margin-top: 15px;
+}
+
+table.listing-table td.title
+{
+	padding-top: 9px ! important;
+}
+
+input#exclude-current-user.checkbox
+{
+	margin-top: -23px ! important;
+}
+
+/* FORMS */
+input.file
+{
+	color: #333 ! important;
+}
+
+input, textarea
+{
+	padding: 2px 5px;
+}
+
+input.checkbox, input.radio
+{
+	padding: 0;
+}
+
+input.submit, input.button
+{
+	padding: 0 5px;
+}
+
+input, select, textarea
+{
+	font-size: 80%;
+}
+
+select
+{
+	padding: 2px 5px 5px 5px;
+}

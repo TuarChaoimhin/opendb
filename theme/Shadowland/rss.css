@@ -1,0 +1,8 @@
+ul#rssfeeds li
+{
+	padding-left: 25px;
+	background: url(../../images/feed-icon16x16.png) no-repeat 0 2px;	
+	line-height: 150%;
+	margin-left: 15px;
+	vertical-align: middle;
+}

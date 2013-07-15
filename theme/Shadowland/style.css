@@ -1,0 +1,569 @@
+/* GENERAL */
+body
+{
+	color: #999;
+	font-size: small;
+	font-family: Helvetica, Arial, sans-serif;
+	background: #000;
+	margin: 0 0 15px 0;
+	padding: 0;
+}
+
+#content
+{
+	margin: 0;
+	padding: 15px;
+}
+
+a, a:active, a:visited
+{
+	color: #ccc ! important;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: white ! important;
+	text-decoration: underline;
+}
+
+img
+{
+	vertical-align: middle;
+	border: none;
+}
+
+/* HEADERS */
+
+h1
+{
+	color: white;
+	font-size: 200%;
+	letter-spacing: 1pt;
+	margin: 0;
+	padding: 0;
+}
+
+h2
+{
+	color: white;
+	font-size: 150%;
+	letter-spacing: 1pt;
+}
+
+h3
+{
+	color: white;
+	font-size: 140%;
+	letter-spacing: 1pt;
+}
+
+h4
+{
+	color: white;
+	font-size: 120%;
+	letter-spacing: 1pt;
+}
+
+h5
+{
+	color: white;
+	font-size: 120%;
+	letter-spacing: 1pt;
+}
+
+h6
+{
+	color: white;
+	font-size: 120%;
+	letter-spacing: 1pt;
+}
+
+h
+{
+	color: white;
+	font-size: 100%;
+	font-weight: bold;
+	letter-spacing: 1pt;
+}
+
+/* HEADER DIV */
+#header
+{
+	background: #333 url(images/h1_bg.png) repeat-y;
+	border-bottom: 1px solid #666;
+	padding: 15px 0 15px 15px;
+	white-space: nowrap;
+}
+
+#header a, #header a:active, #header a:visited
+{
+	color: white;
+}
+
+#header a:hover
+{
+	color: white;
+	text-decoration: none;
+}
+
+div#poweredBy
+{
+	margin: 0;
+	padding: 0;
+}
+
+div#poweredBy a, a:active, a:visited
+{
+	color: #999;
+}
+
+/* NAVIGATION DIV */
+#navigation {	text-align: right;	padding: 5px 15px;	background: #222;	border-bottom: 1px solid #666;}#navigation *{
+	vertical-align: baseline;
+}
+#navigation ul.navLinks{	margin: 0;	padding: 0;	list-style-type: none;
+	display: inline;}#navigation ul.navLinks li{
+	white-space: nowrap;
+	padding-left: 10px;
+	display: inline;}
+
+#navigation form
+{
+	display: inline;
+}
+#navigation form.menu{	position: absolute;
+	left: 15px;}
+
+#navigation img
+{
+	vertical-align: middle;
+	margin-top: -2px;
+}
+
+/* FORMS */
+form
+{
+	margin: 0;
+	padding: 0;
+}
+
+input
+{
+	margin: 0;
+}
+
+input.radio,
+input.checkbox
+{
+	margin-right: 5px;
+}
+
+input.file
+{
+	color: #333;
+	padding: 0 5px
+}
+
+input.text,
+input.password
+{
+	padding: 0 5px;
+}
+
+select
+{
+	margin: 0;
+}
+
+textarea
+{
+	padding: 0 5px;
+	margin-left: 0px;
+}
+
+ul.radioGridOptionsVertical li
+{
+	float: left;
+	width: 200px;
+	height: 20px;
+	line-height: 150%;
+	overflow: hidden;
+}
+
+ul.checkboxGridOptionsVertical li
+{
+	float: left;
+	width: 200px;
+	height: 20px;
+	line-height: 150%;
+	overflow: hidden;
+}
+
+/* LISTS */
+ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* listing controls */
+ul.listingControls
+{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	text-align: right;
+}
+
+ul.listingControls li
+{
+	line-height: 150%;
+}
+
+ul.listingControls input.checkbox
+{
+	margin-right: 0;
+}
+
+ul.listingControls select
+{
+	margin-left: 5px;
+}
+
+input#toggle-show_item_image-cbox.checkbox,
+select#select-items_per_page.select.footer
+{
+	margin: 0 0 0 5px;
+}
+
+/* TABLES */
+table
+{
+	width: 100%;
+}
+
+th
+{
+	padding: 0 5px;
+}
+
+th.prompt, td.prompt
+{
+	text-align: right;
+	padding: 10px;
+	background: #222;
+	width: 200px;
+	white-space: nowrap;
+}
+
+th.prompt img
+{
+	vertical-align: top;
+}
+
+td.data img
+{
+	vertical-align: baseline;
+}
+
+td.title img
+{
+	vertical-align: baseline;
+	margin-left: 5px;
+}
+
+td
+{
+	font-size: small;
+}
+
+td.data
+{
+	padding: 10px;
+	color: #ccc;
+	background: #333;
+}
+
+/* exp */
+
+td.data *
+{
+	vertical-align: middle ! important;
+}
+
+td.data input.checkbox
+{
+	margin-top: -2px ! important;	
+}
+
+/*
+td.data input.radio,
+td.data img
+{
+	margin-top: -3px ! important;
+}
+*/
+
+
+/* end exp */
+
+table.listing-table td
+{
+	padding: 10px;
+}
+
+td.action_links
+{
+	white-space: nowrap;
+	text-align: center;
+}
+
+td.action_links li
+{
+	display: inline;	
+}
+
+td.action_links li.first
+{
+	padding-left: 0;
+}
+
+ul.checkbox-action-links li,
+ul.listingControls li
+{
+	line-height: 150%;
+}
+
+th#header-user_id_rs input.checkbox,
+th#header-item_id_instance_no input.checkbox,
+td.checkbox input.checkbox
+{
+	margin-right: 0;
+}
+
+input#toggle-show_item_image-cbox.checkbox,
+input#toggle-show_deactivated_users-cbox.checkbox,
+select#select-items_per_page.footer
+{
+	margin-left: 10px;
+}
+
+td.category
+{
+	white-space: nowrap;
+}
+
+div#content.user_adminContent input.button
+{
+	margin-right: 5px;
+}
+
+dl.userType dt input.radio
+{
+	margin: 0 5 0 0;
+}
+
+dl.userType dd
+{
+	
+}
+
+/* These two are for the listings, where the colors alternate. */
+.oddRow td, .evenRow td
+{
+	background-color: #222;
+	text-align: center;
+}
+
+.evenRow td
+{
+	background-color: #111;
+}
+
+td.image
+{
+	width: 1px;
+}
+
+td.moreInfo
+{
+	width: 100px;
+	padding: 10px;
+	white-space: nowrap;
+}
+
+td.title
+{
+	padding: 5px 15px;
+}
+
+/* TAB NAV */
+div.tabContentHidden
+{
+	display: none;
+}
+
+li.activeTab
+{
+	border: 1px solid white ! important;
+}
+
+.fieldContentHidden
+{
+	display: none;
+}
+
+/* TABS */
+ul.tabMenu
+{
+	list-style-type: none;
+	margin: 10px 0 0 2px;
+}
+
+ul.tabMenu li
+{
+	display: inline;
+	padding: 5px 10px;
+	margin: 0px;
+	border: 1px solid #666;
+	background: #222;
+	cursor: default;
+	font-size: 120%;
+	font-weight: bold;
+	color: #666;
+}
+
+ul.tabMenu li:hover
+{
+	color: #fff;
+	cursor: pointer;
+}
+
+ul.tabMenu li.activeTab
+{
+	color: #fff;
+	background: #000;
+	cursor: default;
+	border-bottom: 1px solid #000;
+	z-index: 10;
+}
+
+div#details.tabContent,
+div#instance_info.tabContent
+{
+	float: left;
+}
+
+/* DL / DT / DD */
+dl
+{
+	font-size: 120%;
+	color: #ccc;
+}
+
+dt
+{
+	/* empty... for now */
+} 
+
+dd
+{
+	margin-left: 15px;
+	font-size: 90%;
+}
+
+dd img
+{
+	vertical-align: baseline;
+}
+
+/* MESSAGES */
+span.success
+{
+	color: #99ff33;
+	font-weight: bold;
+}
+
+p.success
+{
+	color: #99ff33;
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+p.error
+{
+	color: red;
+	font-weight: bold;
+}
+
+p.rating img
+{
+	vertical-align: baseline;
+}
+
+/* HELP */
+ul.help
+{
+	padding: 10px 0;
+	font-size: 80%;
+}
+
+ul.help img
+{
+	padding-bottom: 3px;
+}
+
+ul.footer-links
+{
+	padding: 15px 0 0 0;
+	clear: both;
+}
+
+ul.footer-links li
+{
+	float: left;
+	padding: 0 15px 0 0;
+}
+
+ul.footer-links a, ul.footer-links a:active, ul.footer-links a:visited
+{
+	color: #ccc;
+}
+
+ul.footer-links a:hover
+{
+	color: white;
+}
+
+/* FOOTER */
+div#footer
+{
+	display: none; /* remove to display footer */
+	text-align: center;
+	padding: 25px;
+	clear: both;
+	font-size: 150%;
+}
+
+div#footer a,
+div#footer a:active,
+div#footer a:visited
+{
+	color: #333;
+	font-weight: bold;
+}
+
+div#footer a:hover
+{
+	color: #666;
+	text-decoration: none;
+}
+
+/* import items */
+div#content.importContent input.submit
+{
+	margin-top: 10px;
+}

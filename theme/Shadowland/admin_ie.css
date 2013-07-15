@@ -1,0 +1,42 @@
+table
+{
+	width: auto ! important;
+}
+
+div#header
+{
+	height: 100px;
+}
+
+ul.saveButtons
+{
+position: absolute;
+right: 15px;
+top: 55px;
+}
+
+ul.saveButtons li
+{
+	display: inline;
+}
+
+table#overCap.tooltip-caption, table.tooltip
+{
+	margin-left: 0;
+}
+
+.tooltip, .tooltip-caption
+{
+	width: 350px;
+}
+
+ul.announcement li
+{
+	padding-top: 15px;
+}
+
+ul.announcement li ul.footer-links li
+{
+	padding-top: 0;
+	border-bottom: none;
+}

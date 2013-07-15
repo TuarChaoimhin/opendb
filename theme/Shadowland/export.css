@@ -1,0 +1,45 @@
+div#content.exportContent input.submit
+{
+	margin-top: 10px;
+}
+
+table
+{
+	margin-bottom: 10px;
+}
+
+td.prompt
+{
+	text-align: right;
+	padding: 10px;
+	background: #222;
+	white-space: nowrap;
+	width: 31%;
+}
+
+table.listing-table td.data
+{
+	padding: 10px;
+	white-space: nowrap;
+}
+
+td.data input.checkbox
+{
+	margin-right: 0;
+}
+
+ul.actionButtons
+{
+	margin-top: 15px;
+}
+
+ul.actionButtons li
+{
+	display: inline;
+	margin-right: 10px;
+}
+
+div#content input.submit
+{
+	margin-top: 0px ! important;
+}

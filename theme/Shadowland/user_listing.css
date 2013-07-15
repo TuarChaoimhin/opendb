@@ -1,0 +1,9 @@
+ul.action-links li.first
+{
+	padding-left: 0;
+}
+
+ul.action-links li
+{
+	padding-left: 5px;
+}

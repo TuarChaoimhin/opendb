@@ -1,0 +1,252 @@
+/* item input widgets */
+div#tab-content ul.saveButtons
+{
+	float: right;
+	padding-bottom: 15px;
+}
+
+div#tab-content
+{
+	padding-top: 0;
+	margin-top: -15px;
+}
+
+div#instance_info.tabContent h3
+{
+	margin-top: 0;	
+}
+
+div#instance_info.tabContent td.data ul.radioGridOptionsVertical li *
+{
+	margin-top: 0 ! important;
+}
+
+/* site plugin search form */
+
+#site-add-content
+{
+	clear: both;
+	padding: 25px 0 0 15px;
+}
+
+ul#site-add-menu li
+{
+	font-size: 120%;
+ 	float: left;
+	padding: 10px 15px;
+	border: 1px solid transparent ! important;
+	white-space: nowrap;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+ul#site-add-menu li.activeTab
+{
+	font-weight: bold;
+	cursor:default;
+	background: #222;
+	color: white;
+	border: 1px solid #0066ff ! important;
+}
+
+img.siteLogo
+{
+	margin-left: 15px;
+}
+
+#site-add-content h3
+{
+	float: left;
+}
+
+div#site-add-content h3
+{
+	display: none;
+}
+
+div#site-add-content h4
+{
+	width: 500px;
+}
+
+#site-add-content label, #site-add-manual label
+{
+	color: #ccc;
+	display: block;
+}
+
+div#site-add-container select,
+div#site-add-container input
+{
+	margin: 3px 0 10px 0;
+}
+
+div.sitePluginHidden
+{
+	display: none;
+}
+
+div#site-add-manual form
+{
+	margin-left: 15px;
+}
+
+div#site-add-content input.submit
+{
+	display: block;
+}
+
+div#site-add-manual input.submit
+{
+	margin-left: 5px;
+}
+
+div#site-search td.image
+{
+	background: transparent;
+}
+
+/* file upload tabs */
+
+ul.urlOptionsMenu
+{
+	clear: both;
+	list-style-type: none;
+}
+
+ul.urlOptionsMenu li
+{
+	float: left;
+	padding: 2px 10px;
+	margin-bottom: 3px;
+	background-color: #111; 
+	border: 1px solid #999;
+	cursor: pointer;
+}
+
+ul.urlOptionsMenu li.activeTab
+{
+	color: white;
+	background-color: #333;
+	font-weight: bold;
+	cursor: default;
+}
+
+div.urlOptionsContainer
+{
+	clear: both;
+	float: left;
+}
+
+/* form input */
+
+input.file
+{
+	color: white;
+}
+
+div#imageurl_2_saveurl input.button
+{
+	margin-left: 5px;
+}
+
+div.multiValue input
+{
+	margin-bottom: 5px;
+}
+
+ul.radioGridOptions
+{
+	line-height: 150%;
+}
+
+ul.radioGridOptions input.checkbox,
+ul.radioGridOptionsVertical input.checkbox
+{
+	margin-right: 5px;
+}
+
+/* dvd (genre) */
+td.data.moviegenre li
+{
+	width: 150px;
+}
+
+/* dvd (language, subtitles) */
+td.data.audiolang li,
+td.data.subtitles li
+{
+	width: 225px;
+}
+
+/* dvd (age, region) */
+td.data.agerating li,
+td.data.dvdregion li
+{
+	width: 400px;
+}
+
+/* dvd (region) */
+td.data.dvdregion li
+{
+	line-height: 150%;
+}
+
+/* dvd (aspect ratio) */
+td.data.ratio li
+{
+	float: left;
+	width: 75px;
+}
+
+/* reviews */
+ul.reviewOptionsVertical li
+{
+	line-height: 150%;
+}
+ul.reviewOptionsVertical li img
+{
+	padding-bottom: 4px;
+}
+
+div#content.item_reviewContent input.button
+{
+	margin: 10px 0 0 2px;
+}
+
+/* for item refresh */
+#details td.data ul.tabMenu
+{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+#details td.data ul.tabMenu input.radio
+{
+	margin: 0 0 0 5px;
+}
+
+/* item delete */
+form.confirmForm
+{
+	margin-left: 15px;
+}
+
+fieldset
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+form.confirmForm input#confirm_yes.radio,
+input#confirm_no.radio
+{
+	margin: 0 15px 0 5px;
+}
+
+form.confirmForm input.submit
+{
+	margin-top: 15px;
+}
+

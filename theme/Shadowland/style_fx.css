@@ -1,0 +1,19 @@
+#navigation form.menu{	position: absolute;
+	left: 12px ! important;}
+
+td.data *
+{
+	vertical-align: middle ! important;
+}
+
+td.data input.radio,
+td.data input.checkbox,
+td.data img
+{
+	margin-top: -2px ! important;
+}
+
+table.listing-table td.title
+{
+	padding-top: 9px ! important;
+}

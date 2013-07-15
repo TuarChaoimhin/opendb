@@ -1,0 +1,54 @@
+ul.searchInputOptions li,
+ul.reviewOptionsVertical li,
+ul.radioGridOptionsVertical li,
+ul.checkboxGridOptionsVertical li
+{
+	line-height: 150%;
+}
+
+ul.checkboxGridOptionsVertical input.checkbox
+{
+	margin-bottom: -4px;
+}
+
+td.data input.radio
+{
+	margin-top: -3px;
+}
+
+td.data select
+{
+	margin-right: 5px;
+}
+
+td.data.srating input.radio
+{
+	margin-right: 0;
+}
+
+td.data.srating img
+{
+	margin-top: -9px;
+}
+
+span.starRating
+{
+	padding: 0 5;
+}
+
+div#content.searchContent input.submit
+{
+	margin: 10px 0 0 2px;
+}
+
+input#search-title.text,
+input#search-attributeval.text,
+input#search-statuscomment.text
+{
+	margin-bottom: 5px;
+}
+
+input.text
+{
+	margin-bottom: 0;
+}

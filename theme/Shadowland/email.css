@@ -1,0 +1,8 @@
+div#content.emailContent h2
+{
+	background: url(images/email.png) no-repeat right;
+	vertical-align: middle;
+	line-height: 48px ! important;
+	padding: 15px 50px 15px 0;
+	display: inline;
+}

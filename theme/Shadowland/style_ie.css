@@ -1,0 +1,93 @@
+html,
+body,
+#content,
+div.tabContainer,
+#tab-content,
+#details,
+div.tabContent,
+div#details.tabContent,
+div#instance_info.tabContent,
+table
+{
+	width: 100% ! important;
+}
+
+#navigation form.menu
+{
+	position: absolute;
+	left: 15px;
+}
+
+#navigation select
+{
+	margin-top: 2px;
+}
+
+h3
+{
+	padding-top: 15px;
+}
+
+div#content.item_displayContent ul.coverimages
+{
+
+	margin-top: 135px ! important;
+	position: absolute;
+	top: 0;
+	right: 15px;
+}
+
+select#navSelect
+{
+	position: absolute;
+}
+
+ul.navLinks li
+{
+	vertical-align: middle;
+}
+
+table.listing-table td.title
+{
+	padding-top: 3px ! important;
+}
+
+#listing-filters form
+{
+	width: 200px;
+	margin-top: 5px ! important;
+}
+
+input#exclude-current-user.checkbox
+{
+	float: right;
+	margin-top: -25px ! important;
+}
+
+div#details.tabContent table
+{
+	margin-top: 15px;
+}
+
+div#details.tabContent
+{
+	margin: 0;
+	padding: 10px 0 0 0;
+}
+
+div#details.tabContent p.rating
+{
+	margin: 0;
+	padding: 10 0 0 2px;
+}
+
+td.data.dvdextras ul.ticks li
+{
+	background-position: 0 5px;
+}
+
+#site-add-content
+{
+	clear: both;
+	margin-top: -50px;
+}

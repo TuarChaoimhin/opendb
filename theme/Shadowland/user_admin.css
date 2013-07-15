@@ -1,0 +1,56 @@
+dl.userType *
+{
+	font-size: 85%;
+	padding-left: 15px;
+}
+
+dt
+{
+	font-weight: bold;
+}
+
+dl.userType dd
+{
+	padding-left: 18px;
+}
+
+ul.addressIndicators
+{
+	width: 100%;
+	clear: both;
+}
+
+ul.addressIndicators li
+{
+	margin-left: 15px;
+	float: left;
+}
+
+table.addressInputForm
+{
+	clear: both;
+	padding-top: 10px;
+}
+
+p.verifyCode
+{
+	padding-left: 15px;
+}
+
+p.verifyCode img
+{
+	padding: 0 10px;
+	vertical-align: bottom;
+}
+
+fieldset
+{
+	margin: 10 0;
+	padding: 0;
+	border: none;
+}
+
+input.radio
+{
+	margin: 0 15px 0 5px;
+}

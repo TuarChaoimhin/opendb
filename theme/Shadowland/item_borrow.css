@@ -1,0 +1,15 @@
+td.item_type_image
+{
+	width: 1px;
+	padding: 5px;
+}
+
+table.moreInfo
+{
+	margin-top: -2px;
+}
+
+div#content.item_borrowContent input.submit
+{
+	margin: 10px 0 0 2px;
+}
