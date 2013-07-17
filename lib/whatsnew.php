@@ -186,7 +186,7 @@ function get_last_item_list(
 		
 		$item_block .= "<h4 class=\"title\">$titleblock</h4>";
 		
-		$item_block .= "<small class=\"updateOn\">".$list_item_r['update_on']."</small>";
+		//$item_block .= "<small class=\"updateOn\">".$list_item_r['update_on']."</small>";
 		
 		$itemblocks[] = $item_block;
 	}
