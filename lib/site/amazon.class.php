@@ -19,6 +19,7 @@
  */
 include_once("./lib/SitePlugin.class.php");
 include_once("./lib/site/amazonutils.php");
+include_once("./lib/item_attribute.php");
 
 class amazon extends SitePlugin {
 	private $url;
@@ -601,8 +602,12 @@ class amazon extends SitePlugin {
 			$amazon_dvd_audio_map = array(array("English", "2.0"), array("English", "5.0"), array("English", "5.1"), array("English", "6.1", "EX"), // Dolby Digital 6.1 EX
 			array("English", "6.1", "DTS", "ES"), // English (6.1 DTS ES)
 			array("English", "6.1"), array("English", "DTS"));
-
-			$amazon_audio_lang_map = array(array("English"), array("French"), array("Spanish"), array("German"));
+			
+			$lookup_results = fetch_attribute_type_lookup_rs("AUDIO_LANG", "order_no");
+			while($row = $lookup_results->fetch_array())
+			{
+			$amazon_audio_lang_map[] = array($row["display"]);
+			}
 
 			while (list(, $audio_lang) = @each($audio_lang_r)) {
 				$key = parse_language_info($audio_lang, $amazon_dvd_audio_map);
@@ -618,8 +623,13 @@ class amazon extends SitePlugin {
 		}
 
 		if (preg_match("!<li><b>Subtitles:</b>[\s]*(.*?)</li>!i", $pageBuffer, $regs)) {
-			$amazon_video_subtitle_map = array(array("English"), array("French"), array("Spanish"), array("German"));
-
+			
+			$lookup_results = fetch_attribute_type_lookup_rs("SUBTITLES", "order_no");
+			while($row = $lookup_results->fetch_array())
+			{
+			$amazon_video_subtitle_map[] = array($row["display"]);
+			}
+			
 			$audio_lang_r = explode(',', $regs[1]);
 
 			while (list(, $audio_lang) = @each($audio_lang_r)) {
