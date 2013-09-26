@@ -27,22 +27,6 @@ include_once ("./lib/review.php");
 include_once ("./lib/filecache.php");
 include_once ("./lib/TitleMask.class.php");
 
-<<<<<<< HEAD
-function get_last_num_items_rs(
-					$num_of_items, 
-					$owner_id = NULL, 
-					$s_item_type = NULL, 
-					$update_on = NULL, 
-					$not_owner_id = NULL,
-					$site_url_prefix = NULL,
-					$title_mask_id = NULL)
-{
-	if(strlen($owner_id)>0)
-		$search_vars_r['owner_id'] = $owner_id;
-		
-	if(strlen($s_item_type)>0)
-		$search_vars_r['s_item_type'] = $s_item_type;
-=======
 function get_last_num_items_rs($num_of_items, $owner_id = NULL, $s_item_type = NULL, $update_on = NULL, $not_owner_id = NULL, $site_url_prefix = NULL, $title_mask_id = NULL) {
 	if (strlen ( $owner_id ) > 0)
 		$search_vars_r ['owner_id'] = $owner_id;
@@ -55,7 +39,6 @@ function get_last_num_items_rs($num_of_items, $owner_id = NULL, $s_item_type = N
 	
 	if (strlen ( $not_owner_id ) > 0)
 		$search_vars_r ['not_owner_id'] = $not_owner_id;
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 	
 	$dummy_r = NULL;
 	$results = fetch_item_listing_rs ( $search_vars_r, $dummy_r, 'update_on', 'DESC', 0, $num_of_items );
@@ -70,24 +53,7 @@ function get_last_num_items_rs($num_of_items, $owner_id = NULL, $s_item_type = N
 					'item_listing' );
 		}
 		
-<<<<<<< HEAD
-	    $titleMaskCfg = new TitleMask($title_mask_group);
-	    
-		$image_attribute_type_rs = NULL;
-		while($item_r = db_fetch_assoc($results))
-		{
-			$item_r['title'] = $titleMaskCfg->expand_item_title($item_r);
-			$item_r['update_on'] = get_localised_timestamp(get_opendb_config_var('welcome.last_items_list', 'datetime_mask'), $item_r['update_on']);
-			
-			$item_r['item_display_url'] = 'item_display.php?item_id='.$item_r['item_id'].'&instance_no='.$item_r['instance_no'];
-			
-			if($site_url_prefix!=NULL)
-			{
-			    $item_r['item_display_url'] = $site_url_prefix.$item_r['item_display_url'];
-			}
-=======
 		$titleMaskCfg = new TitleMask ( $title_mask_group );
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 		
 		$image_attribute_type_rs = NULL;
 		while ( $item_r = db_fetch_assoc ( $results ) ) {
@@ -130,20 +96,6 @@ function get_last_num_items_rs($num_of_items, $owner_id = NULL, $s_item_type = N
 					
 					$file_r = file_cache_get_image_r ( $imageurl, 'display' );
 					
-<<<<<<< HEAD
-					$file_r = file_cache_get_image_r($imageurl, 'display');
-
-					$item_r['imageurl']['url'] = $file_r['thumbnail']['url'];
-					if($site_url_prefix!=NULL)
-					{
-						$item_r['imageurl']['url'] = $site_url_prefix.$item_r['imageurl']['url'];
-					}
-
-					$item_r['imageurl']['width'] = $file_r['thumbnail']['width'];
-					$item_r['imageurl']['height'] = $file_r['thumbnail']['height'];
-					
-					$item_r['imageurl']['title'] = $item_r['title'];
-=======
 					$item_r ['imageurl'] ['url'] = $file_r ['thumbnail'] ['url'];
 					if ($site_url_prefix != NULL) {
 						$item_r ['imageurl'] ['url'] = $site_url_prefix . $item_r ['imageurl'] ['url'];
@@ -153,7 +105,6 @@ function get_last_num_items_rs($num_of_items, $owner_id = NULL, $s_item_type = N
 					$item_r ['imageurl'] ['height'] = $file_r ['thumbnail'] ['height'];
 					
 					$item_r ['imageurl'] ['title'] = $item_r ['title'];
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 				}
 			}
 			
@@ -165,47 +116,6 @@ function get_last_num_items_rs($num_of_items, $owner_id = NULL, $s_item_type = N
 	}
 	return $item_rs;
 }
-<<<<<<< HEAD
-
-function get_last_item_list(
-					$num_of_items, 
-					$owner_id = NULL, 
-					$s_item_type = NULL, 
-					$update_on = NULL, 
-					$not_owner_id = NULL,
-					$site_url_prefix = NULL,
-					$is_new_window_item_display = FALSE)
-{
-	$list_item_rs = get_last_num_items_rs(
-						$num_of_items,// number of items to return
-						$owner_id , //owner_id 
-						$s_item_type, // s_item_type
-						$update_on, //update_on
-						$not_owner_id, // not_owner_id
-						$site_url_prefix,
-						'last_items_list');
-
-	while(list(,$list_item_r) = @each($list_item_rs))
-	{
-		$item_block = '';
-		
-		if($is_new_window_item_display)
-		{
-			$href_link = "<a href=\"".$list_item_r['item_display_url']."&inc_menu=N\" target=\"_new\">";
-		}
-		else
-		{
-			$href_link = "<a href=\"".$list_item_r['item_display_url']."\">";
-		}
-		
-		if(is_user_granted_permission(PERM_VIEW_ITEM_COVERS))
-		{
-			$imageblock = get_image_block($list_item_r['imageurl']);
-			if($imageblock!=NULL)
-			{
-				$item_block .= "<span class=\"coverImage\">".$href_link .$imageblock. "</a></span>";
-			}
-=======
 
 function get_last_item_list($num_of_items, $owner_id = NULL, $s_item_type = NULL, $update_on = NULL, $not_owner_id = NULL, $site_url_prefix = NULL, $is_new_window_item_display = FALSE) {
 	$list_item_rs = get_last_num_items_rs ( $num_of_items, 	// number of items to return
@@ -222,7 +132,6 @@ $site_url_prefix, 'last_items_list' );
 			$href_link = "<a href=\"" . $list_item_r ['item_display_url'] . "&inc_menu=N\" target=\"_new\">";
 		} else {
 			$href_link = "<a href=\"" . $list_item_r ['item_display_url'] . "\">";
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 		}
 		
 		if (is_user_granted_permission ( PERM_VIEW_ITEM_COVERS )) {
@@ -242,15 +151,9 @@ $site_url_prefix, 'last_items_list' );
 		
 		$item_block .= "<h4 class=\"title\">$titleblock</h4>";
 		
-<<<<<<< HEAD
-		//$item_block .= "<small class=\"updateOn\">".$list_item_r['update_on']."</small>";
-		
-		$itemblocks[] = $item_block;
-=======
-		$item_block .= "<small class=\"updateOn\">" . $list_item_r ['update_on'] . "</small>";
+		//$item_block .= "<small class=\"updateOn\">" . $list_item_r ['update_on'] . "</small>";
 		
 		$itemblocks [] = $item_block;
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 	}
 	
 	return $itemblocks;
@@ -275,20 +178,10 @@ function get_image_block($image_r, $class = NULL) {
 	return $imageblock;
 }
 
-<<<<<<< HEAD
-function get_last_item_list_marquee($blocks_r)
-{
-	$buffer = '';
-	if(is_array($blocks_r))
-	{
-		while(list(,$block) = @each($blocks_r))
-		{
-=======
 function get_last_item_list_marquee($blocks_r) {
 	$buffer = '';
 	if (is_array ( $blocks_r )) {
 		while ( list ( , $block ) = @each ( $blocks_r ) ) {
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 			$buffer .= "\n<div class=\"lastitemlist-item\" style=\"display: none;\">";
 			$buffer .= $block;
 			$buffer .= "</div>";
@@ -298,12 +191,7 @@ function get_last_item_list_marquee($blocks_r) {
 	return $buffer;
 }
 
-<<<<<<< HEAD
-function get_last_item_list_table($blocks_r)
-{
-=======
 function get_last_item_list_table($blocks_r) {
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 	$buffer = '';
 	if (is_array ( $blocks_r )) {
 		$buffer .= "\n<ul>";
@@ -329,19 +217,10 @@ function get_welcome_last_item_list($update_on, $user_id) {
 		return NULL;
 	}
 }
-<<<<<<< HEAD
-	
-function get_whats_new_details($update_on, $user_id=NULL)
-{
-	$whats_new_conf_r = get_opendb_config_var('welcome.whats_new');
-	if($whats_new_conf_r['enable']!==FALSE)
-	{
-=======
 
 function get_whats_new_details($update_on, $user_id = NULL) {
 	$whats_new_conf_r = get_opendb_config_var ( 'welcome.whats_new' );
 	if ($whats_new_conf_r ['enable'] !== FALSE) {
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 		$whats_new_rs = NULL;
 		
 		// Get the list of valid status_types, which we can display in this whatsnew page.
@@ -349,90 +228,6 @@ function get_whats_new_details($update_on, $user_id = NULL) {
 		if ($results) {
 			if ($whats_new_conf_r ['restrict_last_login'] !== TRUE)
 				$update_on = NULL;
-<<<<<<< HEAD
-				
-			$search_vars_r['update_on'] = $update_on;
-	
-			if($whats_new_conf_r['exclude_current_user']!==FALSE)
-				$search_vars_r['not_owner_id'] = $user_id;
-	
-			$whats_new_r['heading'] = get_opendb_lang_var('item_stats');
-			
-	        while ($status_type_r = db_fetch_assoc($results))
-			{
-				$search_vars_r['s_status_type'] = $status_type_r['s_status_type'];
-	
-				$status_items_updated = fetch_item_listing_cnt($search_vars_r);
-				$status_title = get_opendb_lang_var('cnt_item(s)_added_updated', array('count'=>$status_items_updated,'s_status_type_desc'=>$status_type_r['description']));
-				
-				if($status_items_updated>0)
-				{
-					$item_r['class'] = 'tick';
-					$item_r['content'] = '<a href="listings.php?'.(strlen($search_vars_r['not_owner_id'])>0?'not_owner_id='.$search_vars_r['not_owner_id'].'&':'').'s_status_type='.$status_type_r['s_status_type'].'&update_on='.urlencode($update_on).'">'
-									.$status_title
-									.'</a>';
-				}
-				else
-				{
-					$item_r['class'] = 'cross';
-					$item_r['content'] = $status_title;
-				}
-				
-				$whats_new_r['items'][] = $item_r;
-			}
-	        db_free_result($results);
-	        
-	        if(is_array($whats_new_r))
-	        {
-	        	$whats_new_rs[] = $whats_new_r;
-	        }
-	    }
-	
-		if(get_opendb_config_var('borrow', 'enable')!==FALSE && $whats_new_conf_r['borrow_stats']!==FALSE)
-		{
-			$whats_new_r['heading'] = get_opendb_lang_var('borrow_stats');
-			
-			$whats_new_r['items'] = NULL;
-			
-			$returned_cnt = fetch_borrowed_item_status_atdate_cnt('C', $update_on);
-			if($returned_cnt > 0)
-				$item_r['class'] = 'tick';
-			else
-				$item_r['class'] = 'cross';
-				
-			$item_r['content'] = get_opendb_lang_var('cnt_item(s)_returned', 'count', $returned_cnt);
-			$whats_new_r['items'][] = $item_r;
-			
-			$borrowed_cnt = fetch_borrowed_item_status_atdate_cnt('B', $update_on);
-			if($borrowed_cnt > 0)
-				$item_r['class'] = 'tick';
-			else
-				$item_r['class'] = 'cross';
-			$item_r['content'] = get_opendb_lang_var('cnt_item(s)_borrowed', 'count', $borrowed_cnt);
-			$whats_new_r['items'][] = $item_r;
-			
-			$reserved_cnt = fetch_borrowed_item_status_atdate_cnt('R', $update_on);
-			if($reserved_cnt > 0)
-				$item_r['class'] = 'tick';
-			else
-				$item_r['class'] = 'cross';
-			$item_r['content'] = get_opendb_lang_var('cnt_item(s)_reserved', 'count', $reserved_cnt);
-			
-			$whats_new_r['items'][] = $item_r;
-			
-			if(is_array($whats_new_r))
-	        {
-	        	$whats_new_rs[] = $whats_new_r;
-	        }
-		}
-	
-		if(get_opendb_config_var('item_review', 'enable')!==FALSE &&
-				$whats_new_conf_r['review_stats']!==FALSE)
-		{
-			$whats_new_r['heading'] = get_opendb_lang_var('review(s)');
-			
-			$whats_new_r['items'] = NULL;
-=======
 			
 			$search_vars_r ['update_on'] = $update_on;
 			
@@ -506,25 +301,12 @@ function get_whats_new_details($update_on, $user_id = NULL) {
 			$whats_new_r ['heading'] = get_opendb_lang_var ( 'review(s)' );
 			
 			$whats_new_r ['items'] = NULL;
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 			
 			$block = '';
 			$review_cnt = fetch_review_atdate_cnt ( $update_on );
 			if ($review_cnt > 0)
 				$item_r ['class'] = 'tick';
 			else
-<<<<<<< HEAD
-				$item_r['class'] = 'cross';
-				
-			$item_r['content'] = get_opendb_lang_var('cnt_review(s)', 'count', $review_cnt);
-	
-			$whats_new_r['items'][] = $item_r;
-			
-			if(is_array($whats_new_r))
-	        {
-	        	$whats_new_rs[] = $whats_new_r;
-	        }
-=======
 				$item_r ['class'] = 'cross';
 			
 			$item_r ['content'] = get_opendb_lang_var ( 'cnt_review(s)', 'count', $review_cnt );
@@ -534,7 +316,6 @@ function get_whats_new_details($update_on, $user_id = NULL) {
 			if (is_array ( $whats_new_r )) {
 				$whats_new_rs [] = $whats_new_r;
 			}
->>>>>>> 5c2ab9f6f9bb522f2e57efe0ab7f1e3e41ec5dc8
 		}
 		
 		return $whats_new_rs;
