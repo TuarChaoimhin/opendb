@@ -58,7 +58,7 @@ class tmdb_tv extends SitePlugin {
                     foreach ($tvshowOverviewData['seasons'] as $season) {
                         if ($result['poster_path'] == 'null') $result['poster_path'] = file_cache_get_noimage_r('listing');
                         $attributeArray['season'] = $season['season_number'];
-                        $this->addListingRow($tvshowOverviewData['original_name'].': Season '.$season['season_number'], $this->imgBase . $this->imgResultsSize . $season['poster_path'], 'Season '.$season['season_number'].', '.$season['air_date'], array('tmdb-tv_id' => $tvshowOverviewData['id']));
+                        $this->addListingRow($tvshowOverviewData['original_name'].': Season '.$season['season_number'], $this->imgBase . $this->imgResultsSize . $season['poster_path'], 'Season '.$season['season_number'].', '.$season['air_date'], array('tmdb-tv_id' => $tvshowOverviewData['id'], 'series_no' => $season['season_number']));
                     }
                 } else {
                     $this->addListingRow(null, null, null, array('tmdb_id' => $search_vars_r['tmdb_id']));
@@ -113,7 +113,7 @@ class tmdb_tv extends SitePlugin {
         if ($this->apikey == '') return false;
         $tmdb_id = $search_attributes_r['tmdb-tv_id'];
         $tvshowOverviewData = (is_opendb_session_var('tmdb-tv-'.$tmdb_id)) ? get_opendb_session_var('tmdb-tv-'.$tmdb_id) : array();
-        $tvshowSeasonData = json_decode($this->fetchURI($this->baseURL . 'tv/' . $tmdb_id . '/season/' .$tvshowOverviewData['season'] . '?api_key=' . $this->apikey . '&append_to_response=credits', true), true);
+        $tvshowSeasonData = json_decode($this->fetchURI($this->baseURL . 'tv/' . $tmdb_id . '/season/' . $search_attributes_r['series_no'] . '?api_key=' . $this->apikey . '&append_to_response=credits', true), true);
         if (!is_null($tvshowSeasonData)) {
             $seasonOverview = (strlen($tvshowSeasonData['overview']) > 0) ? PHP_EOL . PHP_EOL . '---------------' . PHP_EOL . PHP_EOL . $tvshowSeasonData['overview'] : '';
             $this->addItemAttribute('title', $tvshowOverviewData['show_title'] . ': ' . $tvshowSeasonData['name']);
